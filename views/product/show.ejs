@@ -1,0 +1,100 @@
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+
+<br>
+<br>
+<br>
+<%- include("../partials/flash") %> 
+<br>
+<br>
+
+<div class="row">
+    <div class="col-lg-5 col-md-10 col-sm-10 showcard">
+        <div class="card ">
+            <div class="card-body ">
+                <h2 class="card-title"> <%= products.name %> </h2>
+                <h4 class="card-title"><%= products.price %> </h4>
+                <img src="<%= products.image %> " alt="">
+                <p class="card-text"><%= products.desc %> </p>
+                <br>
+                <br>
+
+                <% if (!currentUser) {%> 
+
+                    <form action="/user/<%= products._id %>/cart " method="POST" class="d-inline"> 
+                        <button  class="btn btn-success" >
+                            Add to cart
+                        </button>
+                    </form>
+
+                    <% } else { %> 
+
+                        <a href="/products/<%= products._id %>/edit " class="btn btn-warning">Edit</a>
+
+                        <form action="/user/<%= products._id %>/cart " method="POST" class="d-inline"> 
+                            <button  class="btn btn-success" >
+                                Add to cart
+                            </button>
+                        </form>
+
+                        <form class="delete" action="/products/<%= products._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">
+                            Delete
+                        </button>
+                        </form>
+
+                <% } %> 
+
+            </div>
+        </div> 
+    </div>
+    <div class="col-lg-5 col-md-10 col-sm-10 review"> 
+        <br>
+        <h3 class="text-center"> Review Section</h3>
+
+        <form action="/products/<%= products._id %>/review " method="POST">
+            <label for="rating">Rating :</label>
+            <input class = "form-control" type="range" min="0" max="5" name="rating" id="rating">
+            
+            <label for="comment">Description :</label>
+            <textarea class = "form-control" name="comment" id="comment" cols="30" rows="5" style=" border: 3px solid rgba(53, 98, 165, 0.788);"></textarea>
+
+            <br>
+            <button class="btn btn-primary px-5"> Save </button>
+        
+        </form>
+
+        <div class="reviewss mt-4">
+
+            <% for( let rev of products.reviews ) { %>
+
+                <div class="card" style="border: 1px solid grey;">
+                    <div class="card-header">
+                     <h5> <%= rev.user %> </h5> 
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title"><%= rev.rating %>/5</h5>
+                      <p class="card-text"><%= rev.comment %> </p>
+                      
+                    </div>
+                  </div>
+    
+                
+    
+            
+            <% } %>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<%- include("../partials/footer") %> 

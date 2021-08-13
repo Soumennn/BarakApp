@@ -1,0 +1,27 @@
+
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-3">
+        <a href="" class="navbar-brand mx-2"> BarakApp</a>
+        <a href="/" class=" mx-3 btn btn-sm btn-warning"> Home</a>
+        <% if( currentUser ) { %>
+        <a href="" class="mx-5 nav-link btn-dark" style="font-style: italic;"> Greetings <%= currentUser.username  %> ... ! </a>
+        <% } %> 
+        <ul class="d-flex menu" style="list-style: none;">
+
+            <% if( !currentUser ) { %>
+
+                <li class="px-1"><a href="/products" class="btn btn-sm btn-secondary ">Products</a></li>
+                
+            <% } else {  %>
+
+            
+                <li class="px-1"><a href="/products/new " class="btn btn-sm btn-secondary">New</a></li>
+                <li class="px-2"><a href="/products" class="btn btn-sm btn-secondary ">Products</a></li>
+                <li class="px-1"><a href="/user/<%=currentUser._id%>/cart" class="px-3 btn btn-sm btn-warning"> Cart <span class="badge bg-danger"><%= currentUser.cart.length%> </span></a> </li>
+                <li class="mx-4"><a href="/logout" class="btn btn-sm btn-info">Logout</a></li>
+
+                <% } %> 
+
+        </ul>
+       
+    </nav>
+    

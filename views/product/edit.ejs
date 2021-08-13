@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 class="text-center mb-5"> Edit your product</h3>
+
+<div class="row editpage">
+    <div class="col-lg-7"  style="
+    margin: auto;
+">
+        <form action="/products/<%= products._id %>?_method=PATCH" method="POST">
+            <label for="name">Name :</label>
+            <input class = "form-control" type="text" name="name" value="<%= products.name %>">
+            <label for="price">Price :</label> 
+            <input class = "form-control" type="text" name="price" value="<%= products.price %> ">
+            <label for="image">Image URL :</label>
+            <input class = "form-control" type="text" name="image" value="<%= products.image %> ">
+            <label for="desc">Description :</label>
+            <textarea class = "form-control" name="desc" id="" cols="30" rows="10" style=" border: 3px solid rgba(53, 98, 165, 0.788);"><%= products.desc %> </textarea>
+
+            <br>
+            <button class="btn btn-primary px-5"> Update </button>
+        
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<%- include("../partials/footer") %> 

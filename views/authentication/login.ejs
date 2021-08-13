@@ -1,0 +1,55 @@
+
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+<br><br>
+<br><br>
+
+<%- include("../partials/flash") %> 
+
+
+<div class="container" style="width: 30%;">
+
+    
+    <form action="/login" method="POST" class="needs-validation m-5" novalidate >
+
+        <h2> Login: </h2> <br>
+
+        <div class="mb-3">
+            <label for="username">Username: </label>
+            <input type="text" class="form-control" name="username" id="username" required>
+            <div class="invalid-feedback">
+                Please enter  username.
+            </div>
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="password">Password: </label>
+            <input type="password" class="form-control" name="password" id="password" required>
+            <div class="invalid-feedback">
+                Please enter  password.
+            </div>
+        </div>
+        
+    
+        <button class="btn btn-dark"> Login </button>
+        <a href="/register" class="mx-3" style="text-decoration: none;color: rgb(14, 57, 70); font-weight: 600;"> Sign Up ?</a>
+    
+    
+    
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include("../partials/footer") %> 
+

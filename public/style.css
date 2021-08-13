@@ -1,0 +1,93 @@
+.card{
+
+    border: 5px solid rgba(78, 119, 146, 0.651);
+    height: auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .menu{
+        position: absolute;
+        left: 59rem;
+        top: 18px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .menu{
+        position: absolute;
+        left: 69rem;
+        top: 18px;
+    }
+}
+
+
+
+.showcard{
+    margin: 0px auto;
+}
+.showcard img{
+    display: block;
+    width: 90% ;
+    height: 350px; 
+    margin: auto;
+}
+
+.showcard p{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.review{
+    margin: 0px auto;
+    padding: 30px 20px;
+    background-color: rgba(176, 196, 222, 0.637);
+}
+
+.review button{
+    display: block;
+    margin: auto;
+}
+
+.delete{
+    display: inline;
+}
+
+.editpage, .newpage{
+
+    max-width: 75%;
+    margin: auto;
+    background-color: rgba(175, 209, 224, 0.781);
+    padding: 10px;
+    margin-bottom: 3rem;
+}
+
+.editpage input, textarea{
+    margin: 10px 0px;
+    border: 3px solid rgba(53, 98, 165, 0.788);
+}
+
+.editpage button{
+    display: block;
+    margin: auto;
+}
+
+.newpage{
+  background-color: rgb(238, 161, 161);
+}
+.newpage input, textarea{
+    margin: 10px 0px;
+    border: 3px solid rgba(53, 98, 165, 0.788);
+}
+
+.newpage button{
+    display: block;
+    margin: auto;
+}
+
+
+/* login & register */
+
+.container{
+    padding: 1rem 1rem;
+    background-color: #d7c9ed;
+    margin-top: 120px;
+}

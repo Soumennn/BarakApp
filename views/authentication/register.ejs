@@ -1,0 +1,63 @@
+
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+
+
+
+
+<div class="container" style="width: 30%; background-color: rgba(230, 167, 125, 0.747);">
+
+    
+    <form action="/register" method="POST" class="needs-validation m-5" novalidate >
+
+        <h2> Sign Up: </h2> <br>
+
+        <div class="mb-3">
+            <label for="username">Username: </label>
+            <input type="text" class="form-control" name="username" id="username" required>
+            <div class="invalid-feedback">
+                Please enter  username.
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="email">Email: </label>
+            <input type="email" class="form-control" name="email" id="email" required>
+            <div class="invalid-feedback">
+                Please enter  email.
+            </div>
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="password">Password: </label>
+            <input type="password" class="form-control" name="password" id="password" required>
+            <div class="invalid-feedback">
+                Please enter  password.
+            </div>
+        </div>
+        
+    
+        <button class="btn btn-dark"> Register </button>
+       
+    
+    
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("../partials/footer") %> 
+

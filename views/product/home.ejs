@@ -1,0 +1,59 @@
+
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+
+
+
+
+<div class="container-fluid mt-5" >
+    <br>
+    <br>
+    <%- include("../partials/flash") %> 
+   
+    <h2 class="text-center">  YOU ARE IN HOMEPAGE </h2>
+    <br><br>
+
+    <div class="row" style="width: 85%; margin: auto;">
+        
+        <% for (let item of products) { %> 
+
+                  
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <div class="card mb-5">
+                    <img src="<%= item.image %> " alt="" style="height: 270px;">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= item.name %> </h4>
+                        <h5 class="card-price"> INR <%= item.price %> </h5>
+                        <p class="card-text"><%= item.desc.substring(0,70) %> ... </p>
+
+                        <a href="/products/<%= item._id %>" class="btn btn-primary">Show</a>
+
+                        
+
+                    </div>
+                </div>  
+    
+            </div>
+                
+           
+
+           
+            <% } %> 
+
+
+
+        
+    </div>
+   
+           
+
+</div>
+
+
+ 
+<%- include("../partials/footer") %> 
+
+
+
+

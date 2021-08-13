@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>     
+<%- include("../partials/navbar") %> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 class="text-center mb-5"> Post your product</h3>
+
+<div class="row newpage">
+    <div class="col-lg-7"  style="
+    margin: auto;
+">
+        <form action="/products" method="POST">
+            <label for="name">Name :</label>
+            <input class = "form-control" type="text" name="name" >
+            <label for="price">Price :</label> 
+            <input class = "form-control" type="text" name="price" >
+            <label for="image">Image URL :</label>
+            <input class = "form-control" type="text" name="image"  >
+            <label for="desc">Description :</label>
+            <textarea class = "form-control" name="desc" id="" cols="30" rows="10" style=" border: 3px solid rgba(53, 98, 165, 0.788);"></textarea>
+
+            
+
+            <br>
+            <button class="btn btn-primary px-5"> Save </button>
+        
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<%- include("../partials/footer") %> 

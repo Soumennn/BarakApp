@@ -1,7 +1,9 @@
 .card{
 
-    border: 5px solid rgba(78, 119, 146, 0.651);
+    border: 2px solid rgb(255, 255, 255);
     height: auto;
+    background:rgba(0, 0, 0, 0.89);
+    color: rgba(255, 255, 255, 0.774);
 }
 
 @media screen and (min-width: 1000px) {
@@ -19,7 +21,9 @@
     }
 }
 
-
+body{
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
 
 .showcard{
     margin: 0px auto;

@@ -3,9 +3,48 @@ nav{
 }
 
 .container{
-    padding: 4rem 0px;
-    background-color: #e9edc9;
+    padding: 6rem 0px;
+
+    background: #074547;
+    background: -webkit-radial-gradient(left, #074547, #000000);
+    background: -moz-radial-gradient(left, #074547, #000000);
+    background: radial-gradient(to right, #074547, #000000);
+
     margin-top: 120px;
+    border-radius:10px;
+
+    opacity: 0.9;
+    box-shadow: rgb(75, 111, 150) 0px 20px 30px -10px;
+}
+
+.container h2{
+    color: rgb(226, 225, 224);
+    font-family: cursive;
+    font-weight: 700;
+}
+
+a.btn.btn-primary {
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    color: #0e2c57;
+    background-color: #aeff77;
+    border-color: #0a58ca;
+    box-shadow: rgb(237 249 221 / 20%) 0px 19px 38px, rgb(172 179 170 / 22%) 0px 15px 12px;
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+body{
+    height: calc(100vh - 120px);
+    background:url(https://images.unsplash.com/photo-1573855619003-97b4799dcd8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    background-blend-mode: darken;
+    background-color: rgba(94, 139, 106, 0.493);
 }
 
 
